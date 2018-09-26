@@ -1,0 +1,51 @@
+Nama	: Nabil Tegar
+NPM		: 1606874596
+Kelas	: APAP-B
+
+TUTORIAL 3 APAP
+
+
+Membuat Controller dan Fungsi Add
+----------------------------------
+
+1. 	localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+	Apakah hasilnya? Jika error, tuliskan penjelasan Anda.
+
+	Data berhasil ditambahkan
+
+2. 	localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono
+ 	Apakah hasilnya? Jika error, tuliskan penjelasan Anda.
+
+	Terdapat Whitelabel Error Page, dikarenakan pada controller flyHour di-set True, sedangkan input tidak ada flyHour
+
+
+Method View by licenseNumber
+----------------------------
+
+3. 	localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+	localhost:8080/pilot/view?licenseNumber=1234
+	Apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+
+	Muncul, dikarenakan sebelumnya data pilot telah dimasukkan terlebih dahulu melalui add
+
+
+4. 	localhost:8080/pilot/view?licenseNumber=1234
+	Apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+
+	Tidak, terdapat Whitelabel Error Page, dikarenakan data pilot sebelumnya tidak dimasukkan terlebih dahulu setelah mengulang program.
+
+
+Method View All
+---------------
+
+5. 	localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+	localhost:8080/pilot/viewall
+	Apakah data Pilot tersebut muncul?
+
+	Muncul, dikarenakan data pilot telah dimasukkan.
+
+6. 	Coba tambahkan data Pilot lainnya dengan NPM yang berbeda, lalu buka
+	localhost:8080/pilot/viewall
+	Apakah semua data Pilot muncul?
+
+	Muncul, dikarenakan viewall mengambil list archive pilot yang berisikan semua data pilot yang telah di-add

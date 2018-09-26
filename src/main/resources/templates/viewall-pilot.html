@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View All</title>
+</head>
+<body>
+    <div th:each="pilot : ${listPilot}">
+        <h3 th:text="${pilot.id}"></h3>
+        <h3 th:text="${pilot.licenseNumber}"></h3>
+        <h3 th:text="${pilot.name}"></h3>
+        <h3 th:text="${pilot.flyHour}"></h3>
+    </div>
+</body>
+</html>
